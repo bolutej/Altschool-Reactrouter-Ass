@@ -4,6 +4,7 @@ import Home from './Components/Home';
 import User from './Components/User'
 import './style.css';
 import { ErrorBoundary } from './Components/ErrorBoundary';
+
 const Error = () => {
   return (
     <div>
@@ -24,7 +25,7 @@ function App() {
         <Route path="/user" element={<ErrorBoundary><User /></ErrorBoundary>} />
         <Route
           path="*"
-          element={<Error />}
+          element={Error}
         />
       </Routes>
     </div>
